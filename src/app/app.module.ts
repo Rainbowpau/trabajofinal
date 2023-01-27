@@ -10,11 +10,12 @@ import { LoginComponent } from "./login/login.component";
 import { RegisterComponent } from "./register/register.component";
 import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {ProductsComponent} from './product-list/product-list';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, HomeComponent],
-  imports: [RouterModule, BrowserModule, FormsModule, HttpClientModule, routing, BrowserAnimationsModule, MatSlideToggleModule],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, HomeComponent, ProductsComponent],
+  imports: [RouterModule, BrowserModule, FormsModule, HttpClientModule, routing, BrowserAnimationsModule, MatToolbarModule],
   providers: [CookieService],
   bootstrap: [AppComponent]
 })

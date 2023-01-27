@@ -1,28 +1,16 @@
-<div>
-  <header class="topheader">
-    <%- include('../partials/header'); %>
-  </header>
-  <img class="hero-banner" src="./assets/herobanner.jpeg" alt="hero-image">
-  <h2 class="subtitle"> Boutique de Orquideas. <br>Somos una tienda dedicada a cultivar felicidad.</h2>
-  <div class="articles-container">
+<mat-toolbar>
+  
+  <span>My Application</span>
+  <button type="submit" (click)="goToLogin()">Ir a login</button>
+  <button type="submit" (click)="goToRegister()">Ir al registro</button>
+  <button type="submit" (click)="userService.LogOut()">Desloguearse</button>
+  <button type="submit" (click)="goToProducts()">Conoce nuestros productos</button>
+</mat-toolbar>
     <h1>Bienvenid@ {{ userService.getUser() }}</h1>
-<button type="submit" (click)="goToLogin()">Ir a login</button>
-<button type="submit" (click)="goToRegister()">Ir al registro</button>
-<button type="submit" (click)="userService.LogOut()">Desloguearse</button>
+    <br>
+    <br>
+    <img src="../../assets/orchid-622485_960_720.jpg">
+    <br>
+    <br>
 
-    <% products.forEach(function(product){ %>
-    <div class="article">
-      <h2 style="white-space: nowrap;">
-        <%= product.nombre %>
-      </h2>
-      <img class="img-product" src="<%= product.foto%>" alt="orquidea negra">
-      <button class="see-more" onclick="window.location.href='product-detail-<%= product.id%>'">
-        VER MAS
-      </button>
-    </div>
-    <% })%>
-  </div>
-  </div>
-  <br/>
-  <br/>
-</div>
+   

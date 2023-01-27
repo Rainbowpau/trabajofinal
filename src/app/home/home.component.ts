@@ -18,4 +18,8 @@ export class HomeComponent {
   goToRegister() {
     this.router.navigateByUrl('/register');
   }
+
+  goToProducts(){
+    this.router.navigateByUrl('/product-list')
+  }
 }
