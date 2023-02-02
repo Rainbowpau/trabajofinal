@@ -1,12 +1,10 @@
-<mat-toolbar>
-  
-  <span>My Application</span>
 
-</mat-toolbar>
-
-<div class="row" *ngFor="let dato of products; let i = index"> 
-  <p>{{dato.nombre}}</p>
-  <p>{{dato.descripcion}}</p>
-  <p>{{dato.precio}}</p>
-  <img src="{{path + dato.foto}}"/>
+<div class="container">
+  <div class="row" *ngFor="let dato of products; let i = index">
+    <p class="title">{{dato.nombre}}</p>
+    <img class="image-product" src="{{path + dato.foto}}" />
+    <br>
+    <p>${{dato.precio}}</p>
+    <button class="button" (click)="goToProductDetail(dato.id)"> Ver detalle</button> 
   </div>
+</div>

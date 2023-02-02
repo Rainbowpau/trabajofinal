@@ -10,4 +10,8 @@ export class ProductsService {
   getProducts() {
     return this.http.get("/api/products");
   }
+
+  getProduct(id: string) {
+    return this.http.get("/api/products/" + id);
+  }
 }

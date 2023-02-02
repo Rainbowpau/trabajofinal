@@ -1,16 +1,29 @@
-<mat-toolbar>
-  
-  <span>My Application</span>
-  <button type="submit" (click)="goToLogin()">Ir a login</button>
-  <button type="submit" (click)="goToRegister()">Ir al registro</button>
-  <button type="submit" (click)="userService.LogOut()">Desloguearse</button>
-  <button type="submit" (click)="goToProducts()">Conoce nuestros productos</button>
+<mat-toolbar class="toolbar">
+  <img src="../../assets/Logo Flor Elegante Rosa (4).png" alt="logo" height="100%">
+  <span>
+    <h1>Boutique de Orquídeas</h1>
+  </span>
+  <div class="mat-button">
+    <button class="button" type="submit" (click)="goToLogin()">Inicia sesión</button>
+    <button class="button" type="submit" (click)="goToRegister()">Regístrate</button>
+    <button class="button" type="submit" (click)="userService.LogOut()">Salir</button>
+  </div>
 </mat-toolbar>
-    <h1>Bienvenid@ {{ userService.getUser() }}</h1>
-    <br>
-    <br>
-    <img src="../../assets/orchid-622485_960_720.jpg">
-    <br>
-    <br>
 
-   
+<body class="body">
+  <img src="../../assets/recortebanner.JPG" class="imagen">
+  <br>
+  <div class="button-product-list">
+    <button class="button-product-list" type="submit" (click)="goToProducts()">Conoce nuestros productos</button>
+  </div>
+  <br>
+</body>
+<footer>
+  <div>
+    <img src="../../assets/Logo Flor Elegante Rosa.png" alt="logo" height="150" width="150">
+    <p>Copyrights 2022 </p>
+  </div>
+  <div class="footer-data">
+    <span class="icon-home info"> Rivera 2453, Montevideo</span>
+  </div>
+</footer>

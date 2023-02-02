@@ -4,12 +4,12 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: "app-product-list",
-  templateUrl: "./product-list.html",
-  styleUrls: ["./product-list.css"]
+  selector: "cart",
+  templateUrl: "./cart.html",
+  styleUrls: ["./cart.css"]
 })
 
-export class ProductsComponent implements OnInit {
+export class CartComponent implements OnInit {
   
   products: any= [];
   path: string = '../../';
@@ -22,10 +22,11 @@ export class ProductsComponent implements OnInit {
 
   getProducts() {
     this.ProductsService.getProducts ().subscribe(data => {
+      console.log(data);
       this.products = data
     });
   }
-  goToProductDetail(id: string){
-    this.router.navigateByUrl('/product-detail/' + id)
+  goToProductDetail(){
+    this.router.navigateByUrl('/product-detail')
   }
 }
