@@ -1,1 +1,20 @@
-<h1>hoola</h1>
+<div class="container">
+  <div class="row" *ngFor="let dato of products; let i = index">
+    <img class="image-product" src="{{dato.foto}}" />
+    <p class="title">{{dato.nombre}}</p>
+    <div class="row-2">
+      <p style="margin-right: 20px; color:deeppink;">${{dato.precio}}</p>
+      <button class="button" (click)="sumProduct(dato.id)">+</button>
+      <p style="margin: 0px 20px; color:deeppink;">{{dato.quantity}}</p>
+      <button class="button" (click)="substractProduct(dato.id)">-</button>
+    </div>
+  </div>
+  <div class="row-2">
+    <p style="color: deeppink">Total ${{ total }}</p>
+  </div>
+  <div class="row-2">
+    <button class="button-2" (click)="deleteAllProducts()">Vaciar carrito</button>
+    <button class="button-2" (click)="buy()">Ir a pagar</button>
+  </div>
+
+</div>

@@ -1,0 +1,54 @@
+.image-product {
+  height: 100px;
+}
+
+.button {
+  text-transform: uppercase;
+  border: none;
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #bcd8c1;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px pink, -3px -3px 8px #ffffff;
+  height: 20px;
+}
+
+.button-2 {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  border: none;
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #bcd8c1;
+  padding: 0.875rem 1rem;
+  border-radius: 1.5rem;
+  box-shadow: 3px 3px 8px pink, -3px -3px 8px #ffffff;
+  cursor: pointer;
+}
+
+.title {
+  font-weight: bold;
+  color: pink;
+  font-size: x-large;
+  margin: 0px 20px;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.row-2 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}

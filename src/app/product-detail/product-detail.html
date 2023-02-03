@@ -1,9 +1,9 @@
 
 <div class="container">
     <p class="title">{{product.nombre}}</p>
-    <p style="width:50%; text-align: justify;">{{product.descripcion}}</p>
+    <p style="width:50%; text-align: justify; color:deeppink;">{{product.descripcion}}</p>
     <img class="image-product" src="{{product.foto}}" />
     <br>
-    <p>${{product.precio}}</p>
+    <p style="color:deeppink">${{product.precio}}</p>
     <button class="button" (click)="goToCart()"> COMPRAR</button> 
   </div>

@@ -1,8 +1,6 @@
 
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 import { Router } from "@angular/router";
-import { UsersService } from "../users/users.service";
-
 
 @Component({
   selector: "app-home",
@@ -10,14 +8,7 @@ import { UsersService } from "../users/users.service";
   styleUrls: ["./home.component.css"]
 })
 export class HomeComponent {
-  constructor(public userService: UsersService, public router: Router) {}
-
-  goToLogin() {
-    this.router.navigateByUrl('/login');
-  }
-  goToRegister() {
-    this.router.navigateByUrl('/register');
-  }
+  constructor(public router: Router) {}
 
   goToProducts(){
     this.router.navigateByUrl('/product-list')

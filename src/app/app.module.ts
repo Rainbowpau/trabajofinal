@@ -12,9 +12,10 @@ import { HomeComponent } from "./home/home.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {ProductsComponent} from './product-list/product-list';
+import { CartComponent } from "./cart/cart";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent, HomeComponent, ProductsComponent],
+  declarations: [AppComponent, LoginComponent, RegisterComponent, HomeComponent, ProductsComponent, CartComponent],
   imports: [RouterModule, BrowserModule, FormsModule, HttpClientModule, routing, BrowserAnimationsModule, MatToolbarModule],
   providers: [CookieService],
   bootstrap: [AppComponent]

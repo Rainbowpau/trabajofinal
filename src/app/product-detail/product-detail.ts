@@ -29,6 +29,22 @@ export class DetailComponent implements OnInit {
   }
 
   goToCart(){
+    const products = JSON.parse(window.localStorage.getItem('cart') || '[]');
+
+    this.product.quantity = 1;
+    const prod = new Array(this.product);
+    const prodsString = JSON.stringify(prod);
+
+    if (products) {
+      if (!products?.find((prod:any) => this.product.id === prod.id)) {
+        const all = products.concat(this.product)
+        const prodString = JSON.stringify(all);
+        window.localStorage.setItem('cart', prodString);
+      }
+    } else {
+      window.localStorage.setItem('cart', prodsString);
+    }
+
     this.router.navigateByUrl('/cart')
   }
 }
